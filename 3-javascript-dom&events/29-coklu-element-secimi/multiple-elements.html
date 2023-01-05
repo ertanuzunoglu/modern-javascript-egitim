@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <div class="card-header">
+         <h3 id="title" class="card-title h1">Todo App</h3>
+      </div>
+
+      <ul id="task-list">
+         <li class="task">Görev 1</li>
+         <li class="task">Görev 2</li>
+         <li class="task">Görev 3</li>
+      </ul>
+
+      <ul id="task-list2">
+         <li>Görev 4</li>
+         <li>Görev 5</li>
+         <li>Görev 6</li>
+      </ul>
+
+      <script>
+         let sonuc;
+
+         sonuc = document.getElementsByClassName("task")[0]; // task classına sahip olan 0. elementi sonuca atar.
+
+         taskList = document.getElementsByClassName("task");
+         for (let i = 0; i < taskList.length; i++) {
+            console.log(taskList[i]);
+         }
+         //classı task olan tüm elemanları bize verir.bunu aşağıdaki şekilde de yapabiliriz.
+
+         for (let task of taskList) {
+            console.log(task);
+         }
+
+         //tüm elemanları üzerinde değişiklik yapabiliriz.
+         for (let task of taskList) {
+            task.style.color = "red";
+            task.style.fontSize = "20px";
+            task.innerText = "Görev61";
+         }
+
+         //sadeece task-list2idsine ait elementlerin altındaki li elementlerinde değişiklik yapar.
+         ul = document.getElementById("task-list2");
+         taskList2 = ul.getElementsByTagName("li");
+
+         //yukarıdakinin yerine
+         taskList3 = document.querySelectorAll("#task-list2 li"); //idsi task-list olan elementin altındaki tüm li elementlerini secer.
+         for (let task of taskList2) {
+            task.style.color = "blue";
+            task.style.fontSize = "30px";
+            task.innerText = "Görev2";
+         }
+
+         console.log(sonuc);
+      </script>
+   </body>
+</html>

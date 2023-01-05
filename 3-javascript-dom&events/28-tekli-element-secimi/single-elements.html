@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <div class="card-header">
+         <h3 id="title" class="card-title h1">Todo App</h3>
+      </div>
+
+      <ul id="task-list">
+         <li>Görev 1</li>
+         <li>Görev 2</li>
+         <li>Görev 3</li>
+      </ul>
+
+      <script>
+         let sonuc;
+         sonuc = document.getElementById("title");
+         sonuc = document.getElementById("title").className; //title idsine sahip olan elementin class bilgisi gelir.
+         sonuc = document.getElementById("title").classList; //title idsine sahip olan elementin tüm classları gelir.
+
+         document.getElementById("title").style.fontSize = "30px"; //title idsine sahip elementin fontsizeini 30 px olarak değiştirir.
+         document.getElementById("title").style.color = "blue";
+
+         //document.getElementById('title').style.display ='none';//sayfa üzerindeki görünürlüğü yok eder.
+
+         document.getElementById("title").innerText = "Todo App61";
+
+         document.getElementById("title").innerHTML = "<p>Todo App61</p>"; //title idsine sahip olan elementin içeriğine bir html tagı eklemek için kullanılır.
+
+         sonuc = document.querySelector("#title"); //elemente id ile ulasmak.
+         sonuc = document.querySelector(".card-header"); //elemente class ile ulasmak.
+         sonuc = document.querySelector("div"); //sayfadaki ilk div elemanına ulaşır.
+
+         sonuc = document.querySelector("li"); //bulduğu ilk li elemanına ulaşır.
+
+         sonuc = document.querySelector("li:first-child"); // bulduğu ilk elemama ulaşır.
+
+         sonuc = document.querySelector("li:last-child"); //sayfadaki son li elemanına ulaşır.
+
+         sonuc = document.querySelector("li:nth-child(2)"); // ikinci li elemanını bize getirir.
+
+         console.log(sonuc);
+      </script>
+   </body>
+</html>
